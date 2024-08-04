@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+      body {
+        background-color: black;
+        color: white; /* For text color visibility */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .spinner-container {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        margin-bottom: 20px; /* Space between spinner and text */
+      }
+
+      .spinner {
+        position: absolute;
+        width: calc(100% - 9.9px);
+        height: calc(100% - 9.9px);
+        border: 5px solid transparent;
+        border-radius: 50%;
+        border-top-color: #ffffff; /* Changed to white for better visibility */
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+    </style>
+</head>
+<body>
+  <div class="spinner-container">
+    <div class="spinner"></div>
+  </div>
+  <h1>Welcome to Swank Lab</h1>
+
+  <script>
+    // Function to handle the redirection
+    function redirectToIndex() {
+      window.location.href = 'index.html';
+    }
+
+    // Set a timeout to redirect after 5 seconds
+    setTimeout(redirectToIndex, 5000);
+  </script>
+</body>
+</html>
